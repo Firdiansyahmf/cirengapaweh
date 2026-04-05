@@ -7,7 +7,7 @@ navItems.forEach(item => {
         const pageId = this.getAttribute('data-page');
 
         if (pageId === 'logout') {
-            handleLogout();
+            window.location.href = './login.html';
             return;
         }
 
@@ -29,22 +29,8 @@ navItems.forEach(item => {
     });
 });
 
-// Notification
-const notificationBtn = document.querySelector('.notificationBtn');
-
-notificationBtn.addEventListener('click', function() {
-    alert('You have no new notifications');
-});
-
-// Logout
-function handleLogout() {
-    if (confirm('Are you sure you want to logout?')) {
-        alert('Logging out...');
-    }
-}
-
 document.addEventListener('DOMContentLoaded', function() {
-    const firstNavItem = document.querySelector('.nav-item');
+    const firstNavItem = document.querySelector('.navItem');
     if (firstNavItem) {
         firstNavItem.click();
     }
