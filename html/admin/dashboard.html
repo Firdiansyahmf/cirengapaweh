@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cireng A'paweh Admin Dashboard</title>
+    <link rel="stylesheet" href="../../css/admin/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+    <header class="header">
+        <div class="headerLeft">
+            <h1 class="header-title">Cireng A'paweh Admin Dashboard</h1>
+        </div>
+        <div class="headerRight">
+            <button class="notificationBtn">
+                <span class="material-symbols-outlined">notifications</span>
+            </button>
+            <div class="profileSection">
+                <div class="profileInfo">
+                    <span class="profileName">Cahya</span>
+                    <span class="profileRole">Administrator</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <aside class="sidebar">
+            <nav class="navbar">
+                <!-- NAVBAR -->
+                <a href="#" class="navItem active" data-page="beranda">
+                    <span class="material-symbols-outlined">home</span>
+                    <span class="navText">Beranda</span>
+                </a>
+                <a href="#" class="navItem" data-page="produk">
+                    <span class="material-symbols-outlined">cookie</span>
+                    <span class="navText">Manajemen Produk</span>
+                </a>
+                <a href="#" class="navItem" data-page="lokasi">
+                    <span class="material-symbols-outlined">location_on</span>
+                    <span class="navText">Manajemen Lokasi</span>
+                </a>
+                <a href="#" class="navItem" data-page="promo">
+                    <span class="material-symbols-outlined">local_offer</span>
+                    <span class="navText">Promo</span>
+                </a>
+            </nav>
+
+            <!-- NAVBAR BAWAH -->
+            <nav class="navbarBottom">
+                <a href="#" class="navItem" data-page="pengguna">
+                    <span class="material-symbols-outlined">person</span>
+                    <span class="navText">Pengguna</span>
+                </a>
+                <a href="#" class="navItem logout" data-page="logout">
+                    <span class="material-symbols-outlined">logout</span>
+                    <span class="navText">Keluar</span>
+                </a>
+            </nav>
+        </aside>
+
+        <main class="mainContent">
+            <div class="contentArea">
+                <div id="beranda" class="pageActive">
+                    <h2>Halo, $(User)</h2>
+                    <p>Berikut adalah ringkasan website Cireng A’paweh</p>
+                </div>
+                <div id="produk" class="page">
+                    <h2>Manajemen Produk</h2>
+                    <p>Kelola tipe produk Cireng A’paweh</p>
+                </div>
+                <div id="lokasi" class="page">
+                    <h2>Manajemen Lokasi</h2>
+                    <p>Kelola cabang cireng A’paweh</p>
+                </div>
+                <div id="promo" class="page">
+                    <h2>Promo</h2>
+                    <p>Kelola promo produk cireng A’paweh</p>
+                </div>
+                <div id="pengguna" class="page">
+                    <h2>Manajemen Admin</h2>
+                    <p>Kelola hak akses admin dashboard</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="../../js/admin/script.js"></script>
+</body>
+</html>
