@@ -7,7 +7,7 @@
 
 :root {
     /* Colors */
-    --primary-brand-red: #f23d3d;   
+    --primary-brand-red: #f23d3d;
     --accent-cheese-yellow: #ffca28;
     --charcoal-grey: #545454;
     --clean-white: #ffffff;
@@ -177,9 +177,9 @@
 
 /* Typography */
 .displayHero {
-  font-family: var(--font-display);
-  font-size: var(--fs-hero);
-  font-weight: 400;
+    font-family: var(--font-display);
+    font-size: var(--fs-hero);
+    font-weight: 400;
 }
 
 .displayH1 {
@@ -255,37 +255,37 @@
 }
 
 @media (max-width: 1024px) {
-  :root {
-    --fs-hero: 48px;
-    --fs-h1: 40px;
-    --fs-button: 16px;
+    :root {
+        --fs-hero: 48px;
+        --fs-h1: 40px;
+        --fs-button: 16px;
 
-    /* GAP Tablet */
-    --gap-micro: 8px;
-    --gap-small: 16px;
-    --gap-medium: 24px;
-    --gap-large: 48px;
+        /* GAP Tablet */
+        --gap-micro: 8px;
+        --gap-small: 16px;
+        --gap-medium: 24px;
+        --gap-large: 48px;
 
-    /* Breakpoint */
-    --breakpoint: 768px;
-  }
+        /* Breakpoint */
+        --breakpoint: 768px;
+    }
 }
 
 @media (max-width: 768px) {
-  :root {
-    --fs-hero: 40px;
-    --fs-h1: 32px;
-    --fs-h2: 24px;
-    --fs-h3: 20px;
-    --fs-h4: 18px;
+    :root {
+        --fs-hero: 40px;
+        --fs-h1: 32px;
+        --fs-h2: 24px;
+        --fs-h3: 20px;
+        --fs-h4: 18px;
 
-    /* GAP Mobile */
-    --gap-micro: 8px;
-    --gap-small: 16px;
-    --gap-medium: 24px;
-    --gap-large: 40px;
+        /* GAP Mobile */
+        --gap-micro: 8px;
+        --gap-small: 16px;
+        --gap-medium: 24px;
+        --gap-large: 40px;
 
-    /* Breakpoint */
-    --breakpoint: 390px;
-  }
+        /* Breakpoint */
+        --breakpoint: 390px;
+    }
 }

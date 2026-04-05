@@ -1,7 +1,6 @@
 .siteFooterSection {
   margin-top: var(--gap-large);
-  padding: var(--gap-large) max(var(--gap-small), calc((100vw - 1200px) / 2))
-    var(--gap-medium);
+  padding: var(--gap-large) max(var(--gap-small), calc((100vw - 1200px) / 2)) var(--gap-medium);
   background: var(--fdn-grey-dark);
   color: var(--fdn-white-normal);
 }
@@ -187,7 +186,7 @@
 
 @media (min-width: 768px) and (max-width: 1024px) {
   .siteFooterSection {
-    padding:  var(--gap-large);
+    padding: var(--gap-large);
   }
 
   .footerContents {
