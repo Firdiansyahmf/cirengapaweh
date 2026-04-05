@@ -81,8 +81,6 @@
   --gap-large: 80px;
 }
 
-}
-
 @media (max-width: 1024px) {
   :root {
     --fs-hero: 48px;
