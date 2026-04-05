@@ -91,6 +91,9 @@
   border-radius: 100px;
   background: var(--primary-brand-red);
   color: var(--clean-white);
+  font-family: var(--font-body);
+  font-size: var(--fs-button);
+  font-weight: var(--fw-medium);
 }
 
 .btnPrimary .btnIcon {
@@ -102,10 +105,66 @@
 .btnPrimary:hover {
   background: var(primary --fdn-red-normal-hover);
   color: var(--clean-white);
+  transition: 0.29;
 }
 
 .btnPrimary:active {
-    /* Lanjutin Ilyas Sampe Outline Button*/
+  background: var(primary --fdn-red-dark-active);
+  color: var(--clean-white);
+  transition: 0.29;
+}
+
+.btnSoft {
+  display: inline-flex;
+    padding: var(--gap-small) var(--fw-medium);
+    justify-content: center;
+    align-items: center;
+    gap: var(--gap-micro);
+    border-radius: 100px;
+    background: var(--fdn-grey-light);
+    color: var(--charcoal-grey);
+    font-family: var(--font-body);
+    font-size: var(--fs-button);
+    font-weight: var(--fw-medium);
+}
+
+.btnSoft:hover{
+  background: var(--fdn-grey-light-hover);
+  color: var(--fdn-grey-normal-hover);
+  transition: 0.29;
+}
+
+.btnSoft:active{
+  background: var(--fdn-grey-light-active);
+  color: var(--fdn-grey-normal-active);
+  transition: 0.29;
+}
+
+.btnOutline {
+  display: inline-flex;
+  padding: var(--gap-small) var(--fw-medium);
+  justify-content: center;
+  align-items: center;
+  gap: var(--gap-micro);
+  border-radius: 100px;
+  border: 1px solid var(--primary-brand-red);
+  background: var(--clean-white);
+  color: var(--primary-brand-red);
+  font-family: var(--font-body);
+  font-size: var(--fs-button);
+  font-weight: var(--fw-medium);
+}
+
+.btnOutline:hover{
+  background: var(--fdn-white-normal-hover);
+  color: var(--fdn-red-normal-hover);
+  transition: 0.29;
+}
+
+.btnOutline:active{
+  background: var(--fdn-white-normal-active);
+  color: var(--fdn-red-normal-active);
+  transition: 0.29;
 }
 
 /* Typography */
