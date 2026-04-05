@@ -1,0 +1,230 @@
+.siteFooterSection {
+  margin-top: var(--gap-large);
+  padding: var(--gap-large) max(var(--gap-small), calc((100vw - 1200px) / 2))
+    var(--gap-medium);
+  background: var(--fdn-grey-dark);
+  color: var(--fdn-white-normal);
+}
+
+.footerWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-medium);
+}
+
+.footerContents {
+  display: grid;
+  grid-template-columns: 1.5fr 0.8fr 1fr;
+  gap: var(--gap-large);
+  align-items: flex-start;
+}
+
+.footerCompany {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-small);
+}
+
+.footerBrand {
+  display: flex;
+  align-items: center;
+  gap: var(--gap-micro);
+}
+
+.footerLogo {
+  width: 56px;
+  height: 56px;
+  object-fit: cover;
+  border-radius: 999px;
+  display: block;
+}
+
+.footerSocialIcon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  display: block;
+}
+
+.footerBrandText {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.footerTitle {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: var(--fs-h1);
+  font-weight: var(--fw-regular);
+  line-height: 1.1;
+  color: var(--fdn-yellow-normal);
+}
+
+.footerTagline {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: var(--fs-body-lg);
+  font-weight: var(--fw-regular);
+  color: var(--fdn-white-normal);
+}
+
+.footerDescription {
+  margin: 0;
+  max-width: 560px;
+  font-size: var(--fs-body-lg);
+  line-height: 1.5;
+  color: var(--fdn-white-normal);
+}
+
+.footerHeading {
+  margin: 0 0 var(--gap-small);
+  font-family: var(--font-subheading);
+  font-size: var(--fs-h3);
+  font-weight: var(--fw-semibold);
+  color: var(--fdn-yellow-normal);
+}
+
+.footerLinks {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-small);
+}
+
+.footerNav {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-micro);
+}
+
+.footerLink {
+  color: var(--fdn-white-normal);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footerLink:hover {
+  color: var(--fdn-yellow-normal);
+}
+
+.footerContact {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-small);
+}
+
+.footerContactList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-micro);
+}
+
+.footerContactList li {
+  display: flex;
+  align-items: center;
+  gap: var(--gap-micro);
+  font-family: var(--font-body);
+  font-size: var(--fs-body-main);
+  color: var(--fdn-white-normal);
+}
+
+.footerContactIcon {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+  flex: 0 0 16px;
+}
+
+.footerDivider {
+  width: 100%;
+  height: 2px;
+  background: var(--fdn-red-normal);
+}
+
+.footerBottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--gap-small);
+}
+
+.footerCopyright {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: var(--fs-body-main);
+  color: var(--fdn-white-normal);
+}
+
+.footerSocials {
+  display: flex;
+  align-items: center;
+  gap: var(--gap-micro);
+}
+
+.footerSocialLink {
+  text-decoration: none;
+  font-family: var(--font-body);
+  color: var(--fdn-white-normal);
+  font-weight: var(--fw-semibold);
+  font-size: var(--fs-caption);
+  width: 36px;
+  height: 36px;
+  border: 2px solid var(--fdn-white-dark);
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.footerSocialLink:hover {
+  border-color: var(--fdn-yellow-normal);
+  color: var(--fdn-yellow-normal);
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .siteFooterSection {
+    padding:  var(--gap-large);
+  }
+
+  .footerContents {
+    grid-template-columns: 1fr;
+    gap: var(--gap-medium);
+  }
+
+  .footerDescription,
+  .footerLink,
+  .footerContactList li {
+    font-size: var(--fs-body-main);
+  }
+}
+
+@media (max-width: 767px) {
+  .siteFooterSection {
+    padding: var(--gap-medium) var(--gap-medium);
+  }
+
+  .footerContents {
+    grid-template-columns: 1fr;
+    gap: var(--gap-medium);
+  }
+
+  .footerTitle {
+    font-size: var(--fs-h2);
+  }
+
+  .footerTagline,
+  .footerDescription,
+  .footerLink,
+  .footerContactList li {
+    font-size: var(--fs-body-main);
+  }
+
+  .footerBottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

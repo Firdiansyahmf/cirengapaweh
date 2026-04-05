@@ -58,59 +58,165 @@
       }
     </script>
 
+    <!-- STYLE -->
     <link rel="stylesheet" href="css/global.css" />
     <link rel="stylesheet" href="css/template/navbar.css" />
     <link rel="stylesheet" href="css/template/hero.css" />
+    <link rel="stylesheet" href="css/template/footer.css" />
   </head>
   <body>
-    <section class="navbar">
-      <a href="#" class="logo">
-        <img
-          src="assets/icon/icon.png"
-          alt="Logo Cireng A'paweh"
-          class="logoImage"
-        />
-      </a>
-
-      <button class="burgerMenu" type="button" aria-label="Toggle menu">
-        <img src="assets/icon/burger-menu.svg" alt="" class="burgerMenuIcon" />
-      </button>
-
-      <div class="navBarLinks">
-        <nav class="navLinks">
-          <a href="#" class="navLink active">Beranda</a>
-          <a href="#" class="navLink">Menu</a>
-          <a href="#" class="navLink">Promo</a>
-          <a href="#" class="navLink">Tentang Kami</a>
-        </nav>
-        <div class="navActions">
-          <button class="btn btnPrimary">Pesan Sekarang</button>
-        </div>
-      </div>
-    </section>
-
-    <div class="templateHero">
-      <div class="breakpoint">
-        <div class="1">
+    <!-- NAVBAR -->
+    <nav>
+      <section class="navbar">
+        <a href="#" class="logo">
           <img
-            id="maskot"
-            src="assets/img/dekorasi/maskot.png"
-            alt="Maskot Cireng A'paweh"
+            src="assets/icon/icon.png"
+            alt="Logo Cireng A'paweh"
+            class="logoImage"
           />
+        </a>
+
+        <button class="burgerMenu" type="button" aria-label="Toggle menu">
+          <img
+            src="assets/icon/burger-menu.svg"
+            alt=""
+            class="burgerMenuIcon"
+          />
+        </button>
+
+        <div class="navBarLinks">
+          <nav class="navLinks">
+            <a href="#" class="navLink active">Beranda</a>
+            <a href="#" class="navLink">Menu</a>
+            <a href="#" class="navLink">Promo</a>
+            <a href="#" class="navLink">Tentang Kami</a>
+          </nav>
+          <div class="navActions">
+            <button class="btn btnPrimary">Pesan Sekarang</button>
+          </div>
         </div>
-        <div class="2">
-          <div class="displayHero">
-            Lapar? <span class="red">Cireng A'paweh</span> Siap Manjain Lidah
-            <span class="yellow">
-              <div class="wrap">
-                Kamu
-                <img src="assets/img/dekorasi/line.svg" alt="Dekorasi" /></div
-            ></span>
+      </section>
+    </nav>
+
+    <main>
+      <!-- HERO -->
+      <div class="templateHero">
+        <div class="breakpoint">
+          <div class="1">
+            <img
+              id="maskot"
+              src="assets/img/dekorasi/maskot.png"
+              alt="Maskot Cireng A'paweh"
+            />
+          </div>
+          <div class="2">
+            <div class="displayHero">
+              Lapar? <span class="red">Cireng A'paweh</span> Siap Manjain Lidah
+              <span class="yellow">
+                <div class="wrap">
+                  Kamu
+                  <img src="assets/img/dekorasi/line.svg" alt="Dekorasi" /></div
+              ></span>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </main>
 
+    <!-- FOOTER -->
+    <footer class="siteFooterSection">
+      <div class="footerWrapper">
+        <div class="footerContents">
+          <div class="footerCompany">
+            <div class="footerBrand">
+              <img
+                src="assets/icon/icon.png"
+                alt="Cireng A'Paweh"
+                class="footerLogo"
+              />
+              <div class="footerBrandText">
+                <h2 class="displayH2">Cireng A'Paweh</h2>
+                <p class="caption">Camilan Sunda Modern</p>
+              </div>
+            </div>
+            <p class="caption">
+              Melestarikan cita rasa autentik Sunda melalui inovasi camilan
+              lumer yang praktis dan kekinian.
+            </p>
+          </div>
+
+          <div class="footerLinks">
+            <h3 class="subH3">Jelajahi</h3>
+            <nav class="footerNav">
+              <a href="#" class="footerLink caption">Beranda</a>
+              <a href="#" class="footerLink caption">Tentang Kami</a>
+              <a href="#" class="footerLink caption">Daftar Menu</a>
+              <a href="#" class="footerLink caption">Lokasi Cabang</a>
+              <a href="#" class="footerLink caption">Kemitraan</a>
+            </nav>
+          </div>
+
+          <div class="footerContact">
+            <h3 class="subH3">Hubungi Kami</h3>
+            <ul class="footerContactList">
+              <li>
+                <img
+                  src="assets/icon/icon-phone.svg"
+                  alt="Phone"
+                  class="footerContactIcon"
+                /><span class="caption">+62 812-3456-7890</span>
+              </li>
+              <li>
+                <img
+                  src="assets/icon/icon-email.svg"
+                  alt="Email"
+                  class="footerContactIcon"
+                /><span class="caption">info@cirengapaweh.com</span>
+              </li>
+              <li>
+                <img
+                  src="assets/icon/icon-location.svg"
+                  alt="Location"
+                  class="footerContactIcon"
+                /><span class="caption">Jl. Raya Sunda No. 123, Bandung</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footerDivider"></div>
+
+        <div class="footerBottom">
+          <p class="caption">© 2026 Cireng A'Paweh. All rights reserved.</p>
+          <div class="footerSocials">
+            <a href="#" aria-label="Instagram" class="footerSocialLink"
+              ><img
+                src="assets/icon/icon-instagram.svg"
+                alt="Instagram"
+                class="footerSocialIcon"
+            /></a>
+            <a href="#" aria-label="TikTok" class="footerSocialLink"
+              ><img
+                src="assets/icon/icon-tiktok.svg"
+                alt="TikTok"
+                class="footerSocialIcon"
+            /></a>
+            <a href="#" aria-label="WhatsApp" class="footerSocialLink"
+              ><img
+                src="assets/icon/icon-whatsapp.svg"
+                alt="WhatsApp"
+                class="footerSocialIcon"
+            /></a>
+            <a href="#" aria-label="Facebook" class="footerSocialLink"
+              ><img
+                src="assets/icon/icon-facebook.svg"
+                alt="Facebook"
+                class="footerSocialIcon"
+            /></a>
+          </div>
+        </div>
+      </div>
+    </footer>
     <script src="js/animasi.js"></script>
   </body>
 </html>

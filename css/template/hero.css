@@ -9,6 +9,7 @@
   display: flex;
   justify-content: center;
   color: var(--charcoal-grey);
+  padding: var(--fs-micro) var(--fs-h2) var(--fs-h1) var(--fs-h2);
 }
 
 .templateHero .breakpoint {
@@ -32,8 +33,11 @@
   max-width: 385px;
 }
 
-@media(max-width:768px) {
-    .templateHero .breakpoint {
-        flex-direction: column;
-    }
+@media (max-width: 768px) {
+  .templateHero {
+    padding-top: 100px;
+  }
+  .templateHero .breakpoint {
+    flex-direction: column;
+  }
 }
