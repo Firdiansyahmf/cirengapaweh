@@ -1,0 +1,226 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0;
+  box-sizing: border-box;
+  padding: var(--gap-medium) max(16px, calc((100vw - 1200px) / 2));
+  z-index: 999;
+  background-color: transparent;
+  transition:
+    padding-top 0.25s ease,
+    padding-bottom 0.25s ease,
+    box-shadow 0.25s ease,
+    background-color 0.25s ease;
+}
+
+.navbar.navbarScrolled {
+  padding: var(--gap-micro) max(var(--gap-small), calc((100vw - 1200px) / 2));
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: var(--shadow-lighter);
+  backdrop-filter: blur(50px);
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logoImage {
+  width: auto;
+  height: 90px;
+  display: block;
+}
+
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: var(--gap-medium);
+}
+
+.navLink {
+  font-family: var(--font-body);
+  font-size: var(--fs-body-lg);
+  font-weight: var(--fw-medium);
+  color: var(--fdn-grey-normal);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.navLink.active {
+  color: var(--fdn-red-normal);
+}
+
+.navLink:hover {
+  color: var(--fdn-red-normal-hover);
+}
+
+.navActions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.navBarLinks {
+  display: flex;
+  align-items: center;
+  gap: var(--gap-medium);
+}
+
+.burgerMenu {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.burgerMenuIcon {
+  width: 32px;
+  height: 32px;
+  display: block;
+  transition: filter 0.25s ease;
+}
+
+.burgerMenu:hover .burgerMenuIcon {
+  filter: brightness(0.8);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 24px;
+  border-radius: 999px;
+  background: var(--fdn-red-normal);
+  color: var(--fdn-white-normal);
+  text-decoration: none;
+  font-weight: var(--fw-semibold);
+  border: none;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.btn:hover {
+  background: var(--fdn-red-normal-hover);
+}
+
+.btn:active {
+  background: var(--fdn-red-normal-active);
+  transform: translateY(1px);
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .navbar {
+    padding: var(--gap-large) var(--gap-small);
+    justify-content: center;
+    gap: var(--gap-medium);
+  }
+
+  .navbar.navbarScrolled {
+    padding: var(--gap-micro) var(--gap-small);
+  }
+
+  .logoImage {
+    height: 72px;
+  }
+
+  .navBarLinks {
+    gap: var(--gap-small);
+  }
+
+  .navLinks {
+    gap: 12px;
+  }
+
+  .navLink {
+    font-size: var(--fs-body-main);
+  }
+
+  .navActions .btnPrimary {
+    padding: 12px 18px;
+    font-size: var(--fs-body-main);
+  }
+}
+
+@media (max-width: 767px) {
+  .navbar {
+    padding: var(--gap-medium) var(--gap-small);
+    justify-content: space-between;
+    align-items: center;
+    gap: 0;
+  }
+
+  .navbar.navbarScrolled {
+    padding: var(--gap-micro) var(--gap-small);
+  }
+
+  .logo {
+    width: auto;
+    justify-content: flex-start;
+  }
+
+  .logoImage {
+    height: 50px;
+  }
+
+  .burgerMenu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .navBarLinks {
+    display: flex;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    padding: var(--gap-small);
+    background: var(--fdn-white-normal);
+    box-shadow: 0 8px 16px rgba(84, 84, 84, 0.15);
+    z-index: 998;
+    opacity: 0;
+    transform: translateY(-12px);
+    max-height: 0;
+    overflow: hidden;
+    pointer-events: none;
+    transition:
+      opacity 0.25s ease,
+      transform 0.25s ease,
+      max-height 0.3s ease;
+  }
+
+  .navBarLinks.active {
+    opacity: 1;
+    transform: translateY(0);
+    max-height: 360px;
+    pointer-events: auto;
+  }
+
+  .navLinks {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+  }
+
+  .navActions {
+    width: 100%;
+    justify-content: center;
+    margin-top: var(--gap-small);
+  }
+}
