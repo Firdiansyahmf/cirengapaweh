@@ -81,34 +81,31 @@
   --gap-large: 80px;
 }
 
-@media (max-width: 1024px) {
-  :root {
-    --fs-hero: 48px;
-    --fs-h1: 40px;
-    --fs-button: 16px;
-
-    /* GAP Tablet */
-    --gap-micro: 8px;
-    --gap-small: 16px;
-    --gap-medium: 24px;
-    --gap-large: 48px;
-  }
+/* Button Primary */
+.btnPrimary {
+  display: inline-flex;
+  padding: var(--gap-small) var(--fw-medium);
+  justify-content: center;
+  align-items: center;
+  gap: var(--gap-micro);
+  border-radius: 100px;
+  background: var(--primary-brand-red);
+  color: var(--clean-white);
 }
 
-@media (max-width: 640px) {
-  :root {
-    --fs-hero: 40px;
-    --fs-h1: 32px;
-    --fs-h2: 24px;
-    --fs-h3: 20px;
-    --fs-h4: 18px;
+.btnPrimary .btnIcon {
+  width: 20px;
+  height: 20px;
+  aspect-ratio: 1/1;
+}
 
-    /* GAP Mobile */
-    --gap-micro: 8px;
-    --gap-small: 16px;
-    --gap-medium: 24px;
-    --gap-large: 40px;
-  }
+.btnPrimary:hover {
+  background: var(primary --fdn-red-normal-hover);
+  color: var(--clean-white);
+}
+
+.btnPrimary:active {
+    /* Lanjutin Ilyas Sampe Outline Button*/
 }
 
 /* Typography */
@@ -173,4 +170,34 @@
 
 .shadowLight {
   box-shadow: var(--shadow-lighter);
+}
+
+@media (max-width: 1024px) {
+  :root {
+    --fs-hero: 48px;
+    --fs-h1: 40px;
+    --fs-button: 16px;
+
+    /* GAP Tablet */
+    --gap-micro: 8px;
+    --gap-small: 16px;
+    --gap-medium: 24px;
+    --gap-large: 48px;
+  }
+}
+
+@media (max-width: 640px) {
+  :root {
+    --fs-hero: 40px;
+    --fs-h1: 32px;
+    --fs-h2: 24px;
+    --fs-h3: 20px;
+    --fs-h4: 18px;
+
+    /* GAP Mobile */
+    --gap-micro: 8px;
+    --gap-small: 16px;
+    --gap-medium: 24px;
+    --gap-large: 40px;
+  }
 }
