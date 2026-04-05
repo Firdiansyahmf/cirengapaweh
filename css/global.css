@@ -75,6 +75,11 @@
   --shadow-lighter: 0px 0px 12px rgba(84, 84, 84, 0.25);
 
   /* GAP Desktop */
+  --gap-micro: 8px;
+  --gap-small: 16px;
+  --gap-medium: 32px;
+  --gap-large: 80px;
+}
 
 }
 
@@ -85,6 +90,10 @@
     --fs-button: 16px;
 
     /* GAP Tablet */
+    --gap-micro: 8px;
+    --gap-small: 16px;
+    --gap-medium: 24px;
+    --gap-large: 48px;
   }
 }
 
@@ -97,6 +106,10 @@
     --fs-h4: 18px;
 
     /* GAP Mobile */
+    --gap-micro: 8px;
+    --gap-small: 16px;
+    --gap-medium: 24px;
+    --gap-large: 40px;
   }
 }
 
