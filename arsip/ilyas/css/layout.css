@@ -564,3 +564,67 @@
     display: flex;
     flex-direction: column; /* Biar Nama & Tagline tetap tumpuk atas-bawah */
 }
+
+/* --- Layout Detail Produk --- */
+.product-detail {
+    padding: 60px 0;
+    background-color: var(--white);
+}
+
+.detail-wrapper {
+    display: flex;
+    gap: 60px;
+    align-items: flex-start;
+}
+
+.product-visual { flex: 1; position: relative; }
+.product-info-content { flex: 1; }
+
+.main-image-container {
+    position: relative;
+    border-radius: 32px;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.main-product-img { width: 100%; display: block; }
+
+/* Styling Kotak Pesan Seller & Kartu Fitur */
+.seller-message {
+    background: var(--white);
+    border-left: 6px solid var(--primary-red);
+    padding: 25px;
+    border-radius: 0 24px 24px 0;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    margin-bottom: 40px;
+}
+
+.feature-cards {
+    display: flex;
+    gap: 15px;
+    margin: 20px 0 40px 0;
+}
+
+.f-card {
+    flex: 1;
+    padding: 20px 10px;
+    border-radius: 20px;
+    text-align: center;
+    color: var(--white);
+}
+
+.f-card.yellow { background-color: var(--accent-yellow); color: var(--charcoal); }
+.f-card.red { background-color: var(--primary-red); }
+.f-card.charcoal { background-color: var(--charcoal); }
+
+/* Box Terjual (Social Proof) */
+.social-proof-box {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 18px 25px;
+    border: 2px dashed var(--accent-yellow);
+    background-color: #FFFDE7;
+    border-radius: 20px;
+    margin-bottom: 40px;
+}
