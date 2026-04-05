@@ -1,0 +1,16 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Lilita+One&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Font Helpers - Biar nanti di HTML tinggal panggil class-nya */
+
+.font-display {
+    font-family: 'Lilita One', cursive;
+}
+
+.font-sub {
+    font-family: 'Fredoka', sans-serif;
+}
+
+.font-body {
+    font-family: 'Poppins', sans-serif;
+}
