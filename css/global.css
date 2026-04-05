@@ -1,108 +1,165 @@
-@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&family=Lilita+One&family=Poppins:wght@400;500;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&family=Lilita+One&family=Poppins:wght@400;500;600&display=swap");
 
-/* === CSS VARIABLE === */
 :root {
-    /* START COLOR FOUNDATION */
-    /* Brand Colors */
-    --primary-brand-red: #f23d3d;
-    --accent-cheese-yellow: #ffca28;
-    --charcoal-grey: #545454;
-    --clean-white: #ffffff;
+  /* Colors */
+  --primary-brand-red: #f23d3d;
+  --accent-cheese-yellow: #ffca28;
+  --charcoal-grey: #545454;
+  --clean-white: #ffffff;
 
-    /* Foundation - Primary Brand Red */
-    --fdn-red-light: #feecec;
-    --fdn-red-light-hover: #fde2e2;
-    --fdn-red-light-active: #fbc3c3;
-    --fdn-red-normal: #f23d3d;
-    --fdn-red-normal-hover: #da3737;
-    --fdn-red-normal-active: #c23131;
-    --fdn-red-dark: #b62e2e;
-    --fdn-red-dark-hover: #912525;
-    --fdn-red-dark-active: #6d1b1b;
-    --fdn-red-darker: #551515;
+  --fdn-red-light: #feecec;
+  --fdn-red-light-hover: #fde2e2;
+  --fdn-red-light-active: #fbc3c3;
+  --fdn-red-normal: #f23d3d;
+  --fdn-red-normal-hover: #da3737;
+  --fdn-red-normal-active: #c23131;
+  --fdn-red-dark: #b62e2e;
+  --fdn-red-dark-hover: #912525;
+  --fdn-red-dark-active: #6d1b1b;
+  --fdn-red-darker: #551515;
 
-    /* Foundation - Accent Cheese Yellow */
-    --fdn-yellow-light: #fffaea;
-    --fdn-yellow-light-hover: #fff7df;
-    --fdn-yellow-light-active: #ffefbc;
-    --fdn-yellow-normal: #ffca28;
-    --fdn-yellow-normal-hover: #e6b624;
-    --fdn-yellow-normal-active: #cca220;
-    --fdn-yellow-dark: #bf981e;
-    --fdn-yellow-dark-hover: #997918;
-    --fdn-yellow-dark-active: #735b12;
-    --fdn-yellow-darker: #59470e;
+  --fdn-yellow-light: #fffaea;
+  --fdn-yellow-light-hover: #fff7df;
+  --fdn-yellow-light-active: #ffefbc;
+  --fdn-yellow-normal: #ffca28;
+  --fdn-yellow-normal-hover: #e6b624;
+  --fdn-yellow-normal-active: #cca220;
+  --fdn-yellow-dark: #bf981e;
+  --fdn-yellow-dark-hover: #997918;
+  --fdn-yellow-dark-active: #735b12;
+  --fdn-yellow-darker: #59470e;
 
-    /* Foundation - Charcoal Grey */
-    --fdn-grey-light: #eeeeee;
-    --fdn-grey-light-hover: #e5e5e5;
-    --fdn-grey-light-active: #cacaca;
-    --fdn-grey-normal: #545454;
-    --fdn-grey-normal-hover: #4c4c4c;
-    --fdn-grey-normal-active: #434343;
-    --fdn-grey-dark: #3f3f3f;
-    --fdn-grey-dark-hover: #323232;
-    --fdn-grey-dark-active: #262626;
-    --fdn-grey-darker: #1d1d1d;
+  --fdn-grey-light: #eeeeee;
+  --fdn-grey-light-hover: #e5e5e5;
+  --fdn-grey-light-active: #cacaca;
+  --fdn-grey-normal: #545454;
+  --fdn-grey-normal-hover: #4c4c4c;
+  --fdn-grey-normal-active: #434343;
+  --fdn-grey-dark: #3f3f3f;
+  --fdn-grey-dark-hover: #323232;
+  --fdn-grey-dark-active: #262626;
+  --fdn-grey-darker: #1d1d1d;
 
-    /* Foundation - Clear White */
-    --fdn-white-light: #ffffff;
-    --fdn-white-light-hover: #ffffff;
-    --fdn-white-light-active: #ffffff;
-    --fdn-white-normal: #ffffff;
-    --fdn-white-normal-hover: #e6e6e6;
-    --fdn-white-normal-active: #cccccc;
-    --fdn-white-dark: #bfbfbf;
-    --fdn-white-dark-hover: #999999;
-    --fdn-white-dark-active: #737373;
-    --fdn-white-darker: #595959;
-    /* END COLOR FOUNDATION */
+  --fdn-white-light: #ffffff;
+  --fdn-white-light-hover: #ffffff;
+  --fdn-white-light-active: #ffffff;
+  --fdn-white-normal: #ffffff;
+  --fdn-white-normal-hover: #e6e6e6;
+  --fdn-white-normal-active: #cccccc;
+  --fdn-white-dark: #bfbfbf;
+  --fdn-white-dark-hover: #999999;
+  --fdn-white-dark-active: #737373;
+  --fdn-white-darker: #595959;
 
-    /* --- Font --- */
-    --font-display: "Lilita One", sans-serif;
-    --font-subheading: "Fredoka", sans-serif;
-    --font-body: "Poppins", sans-serif;
+  /* Font */
+  --font-display: "Lilita One", sans-serif;
+  --font-subheading: "Fredoka", sans-serif;
+  --font-body: "Poppins", sans-serif;
 
-    /* --- Shadows --- */
-    --shadow-main: 0px 8px 26px rgba(84, 84, 84, 0.25);
-    --shadow-lighter: 0px 0px 12px rgba(84, 84, 84, 0.25);
+  --fs-hero: 64px;
+  --fs-h1: 48px;
+  --fs-h2: 32px;
+  --fs-h3: 24px;
+  --fs-h4: 20px;
+  --fs-body-lg: 18px;
+  --fs-body-main: 16px;
+  --fs-caption: 14px;
+  --fs-button: 18px;
 
-    /* --- Desktop Typography (Default) --- */
-    --fs-hero: 64px;
-    --fs-h1: 48px;
-    --fs-h2: 32px;
-    --fs-h3: 24px;
-    --fs-h4: 20px;
-    --fs-body-lg: 18px;
-    --fs-body-main: 16px;
-    --fs-caption: 14px;
-    --fs-button: 18px;
+  /* Font Weight */
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
 
-    /* Font Weights */
-    --fw-regular: 400;
-    --fw-medium: 500;
-    --fw-semibold: 600;
+  --shadow-main: 0px 8px 26px rgba(84, 84, 84, 0.25);
+  --shadow-lighter: 0px 0px 12px rgba(84, 84, 84, 0.25);
+
+  /* GAP Desktop */
+
 }
 
-/* --- Responsive Adjustments (Tablet) --- */
 @media (max-width: 1024px) {
-    :root {
-        --fs-hero: 48px;
-        --fs-h1: 40px;
-        --fs-h2: 32px;
-        --fs-h3: 24px;
-        --fs-h4: 20px;
-        --fs-button: 16px;
-    }
+  :root {
+    --fs-hero: 48px;
+    --fs-h1: 40px;
+    --fs-button: 16px;
+
+    /* GAP Tablet */
+  }
 }
 
-/* --- Responsive Adjustments (Mobile) --- */
 @media (max-width: 640px) {
-    :root {
-        --fs-hero: 40px;
-        --fs-h1: 32px;
-        --fs-h2: 24px;
-        --fs-h3: 20px;
-        --fs-h4: 18px;
-    }
+  :root {
+    --fs-hero: 40px;
+    --fs-h1: 32px;
+    --fs-h2: 24px;
+    --fs-h3: 20px;
+    --fs-h4: 18px;
+
+    /* GAP Mobile */
+  }
+}
+
+/* Typography */
+.displayHero {
+  font-family: var(--font-display);
+  font-size: var(--fs-hero);
+  font-weight: 400;
+}
+
+.displayH1 {
+  font-family: var(--font-display);
+  font-size: var(--fs-h1);
+  font-weight: 400;
+}
+
+.displayH2 {
+  font-family: var(--font-display);
+  font-size: var(--fs-h2);
+  font-weight: 400;
+}
+
+.subH3 {
+  font-family: var(--font-subheading);
+  font-size: var(--fs-h3);
+  font-weight: var(--fw-semibold);
+}
+
+.subH4 {
+  font-family: var(--font-subheading);
+  font-size: var(--fs-h4);
+  font-weight: var(--fw-medium);
+}
+
+.bodyLg {
+  font-family: var(--font-body);
+  font-size: var(--fs-body-lg);
+  font-weight: var(--fw-medium);
+}
+
+.bodyMain {
+  font-family: var(--font-body);
+  font-size: var(--fs-body-main);
+  font-weight: var(--fw-regular);
+}
+
+.caption {
+  font-family: var(--font-body);
+  font-size: var(--fs-caption);
+  font-weight: var(--fw-regular);
+}
+
+.btnText {
+  font-family: var(--font-body);
+  font-size: var(--fs-button);
+  font-weight: var(--fw-medium);
+}
+
+/* Effects */
+.shadow {
+  box-shadow: var(--shadow-main);
+}
+
+.shadowLight {
+  box-shadow: var(--shadow-lighter);
 }
