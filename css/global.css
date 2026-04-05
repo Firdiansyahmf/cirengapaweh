@@ -92,7 +92,7 @@
 /* Button Primary */
 .btnPrimary {
     display: inline-flex;
-    padding: var(--gap-small) var(--fw-medium);
+    padding: var(--gap-small) var(--gap-medium);
     justify-content: center;
     align-items: center;
     gap: var(--gap-micro);
