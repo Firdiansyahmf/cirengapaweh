@@ -1,0 +1,42 @@
+/* Warna Dasar Cireng A'Paweh */
+:root {
+    --primary-red: #F23D3D;
+    --accent-yellow: #FFCA28;
+    --charcoal: #545454;
+    --bg-light: #F5F5F7; /* Abu-abu Apple yang tadi kita bahas */
+    --white: #FFFFFF;
+    
+    /* Ukuran Container Desktop 1920px (Area Konten 1440px) */
+    --container-width: 1200px;
+}
+
+/* CSS Reset - Biar gak ada margin/padding bawaan browser yang ganggu */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-light);
+    font-family: 'Poppins', sans-serif; /* Font default */
+    color: var(--charcoal);
+    overflow-x: hidden; /* Biar gak ada scroll horizontal aneh */
+}
+
+/* Container Helper - Biar konten selalu di tengah */
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 24px; /* Padding aman buat kiri-kanan */
+}
+
+/* Utility link biar gak ada garis bawah biru default */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}

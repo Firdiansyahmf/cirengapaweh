@@ -1,0 +1,566 @@
+.navbar {
+    background-color: var(--white);
+    padding: 20px 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05); /* Shadow tipis biar elegan */
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Biar gak ketutup gambar hero */
+}
+
+.nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px; /* Atur tinggi logo sesuai kebutuhan */
+    width: auto;
+}
+
+.nav-links {
+    display: flex;
+    gap: 40px; /* Jarak antar menu */
+}
+
+.nav-links a {
+    color: var(--charcoal);
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--primary-red);
+}
+
+.nav-links a.active {
+    color: var(--primary-red);
+    font-weight: 600;
+}
+
+.hero {
+    width: 100%;
+    background-color: var(--bg-light); /* Biar gak kontras banget sama putih navbar */
+    padding-top: 20px; /* Kasih sedikit jarak dari navbar */
+}
+
+.hero-wrapper {
+    /* Kita panggil class container agar otomatis 1200px dan di tengah */
+    max-width: var(--container-width);
+    margin: 0 auto;
+    border-radius: 24px; /* Opsi: Kasih lengkungan dikit biar modern kayak di Figma */
+    overflow: hidden; /* Biar gambar gak keluar dari radius */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1); /* Tambahin shadow biar "pop-up" */
+}
+
+.hero-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* About Section */
+.about {
+    padding: 80px 0;
+    background-color: #FFF1F1; /* REVISI: Pakai warna peach muda agar kartu putih terlihat */
+}
+
+.about-wrapper {
+    display: flex;
+    align-items: flex-start; /* REVISI: Biar judul & teks sejajar dari atas */
+    gap: 80px;
+}
+
+.about-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start; /* Tetap mepet kiri sejajar banner */
+}
+
+/* Kotak putih di belakang logo gede (sesuai desain Figma-mu) */
+.logo-card {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 32px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.06); /* Shadow halus agar terlihat premium */
+    max-width: 450px;
+}
+
+/* Garis Kuning di bawah judul */
+.title-line {
+    width: 80px;
+    height: 6px;
+    background-color: var(--accent-yellow);
+    border-radius: 10px;
+    margin-bottom: 30px; /* Jarak ke paragraf */
+}
+
+.logo-card img {
+    width: 100%;
+    height: auto;
+}
+
+.about-content {
+    flex: 1; /* Mengambil 50% ruang sisanya */
+}
+
+.section-title {
+    font-size: 42px;
+    color: var(--primary-red);
+    margin-bottom: 10px; /* Diperkecil karena ada garis kuning di bawahnya */
+}
+
+.about-text p {
+    font-size: 18px;
+    line-height: 1.8; /* Jarak antar baris teks agar enak dibaca (HCI Rule) */
+    color: var(--charcoal);
+    margin-bottom: 20px;
+}
+
+/* Vision & Mission Section */
+.vision-mission {
+    padding: 120px 0 100px 0; /* Padding atas diperbesar untuk ruang lengkungan */
+    background-color: var(--primary-red);
+    
+    /* KUNCINYA DI SINI: Membuat lengkungan besar di pojok kiri & kanan atas */
+    border-top-left-radius: 150px; 
+    border-top-right-radius: 150px;
+    
+    text-align: center;
+    margin-top: -50px; /* Opsional: Agar sedikit overlap dengan section di atasnya */
+    position: relative;
+    z-index: 10;
+}
+
+.sub-title-white {
+    color: var(--white);
+    max-width: 400px; /* Agar teksnya pecah jadi 2 baris seperti di screenshot */
+    margin: 0 auto 20px auto;
+    font-size: 16px;
+    line-height: 1.5;
+    opacity: 0.9;
+}
+
+/* Judul putih diperkecil sedikit marginnya */
+.section-title-white {
+    font-size: 42px;
+    color: var(--white);
+    margin-bottom: 10px;
+}
+
+.section-title-white {
+    font-size: 42px;
+    color: var(--white);
+    margin-bottom: 10px;
+}
+
+/* Garis kuning versi tengah */
+.title-line-center {
+    width: 80px;
+    height: 6px;
+    background-color: var(--accent-yellow);
+    border-radius: 10px;
+    margin: 0 auto 60px auto;
+}
+
+.vision-mission-wrapper {
+    display: flex;
+    gap: 40px; /* Jarak antar kartu */
+    justify-content: center;
+}
+
+/* Styling Kartu Putih */
+.card-vm {
+    background-color: var(--white);
+    padding: 50px 40px;
+    border-radius: 32px;
+    flex: 1; /* Biar lebar kedua kartu sama rata */
+    max-width: 550px;
+    text-align: left; /* Teks di dalam kartu tetap rata kiri */
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease;
+}
+
+.card-vm:hover {
+    transform: translateY(-10px); /* Efek melayang dikit pas di-hover */
+}
+
+/* Styling Ikon Bulat */
+.icon-circle {
+    width: 60px;
+    height: 60px;
+    background-color: #FFEBEE; /* Merah sangat muda */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+}
+
+.icon-circle img {
+    width: 30px;
+    height: auto;
+}
+
+.card-title {
+    font-size: 28px;
+    color: var(--primary-red);
+    margin-bottom: 16px;
+}
+
+.mission-list li {
+    margin-bottom: 12px;
+    position: relative;
+    padding-left: 25px;
+}
+
+/* Custom bullet points biar makin keren */
+.mission-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--accent-yellow);
+    font-weight: bold;
+}
+
+/* Socials Section */
+.socials {
+    padding: 80px 0;
+    background-color: var(--bg-light); /* Warna background peach muda biar sinkron */
+    text-align: center;
+}
+
+/* Branch Section Styling */
+.branch {
+    padding: 80px 0;
+    background-color: var(--white);
+    text-align: center;
+}
+
+.text-red { color: var(--primary-red); }
+.sub-title-center { margin-bottom: 10px; color: var(--charcoal); }
+
+.branch-grid {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    margin-bottom: 50px; /* Jarak ke peta di bawahnya */
+}
+
+.branch-card {
+    background-color: #FFF9F9; /* Warna kartu agak kemerahan dikit biar soft */
+    padding: 30px;
+    border-radius: 24px;
+    flex: 1;
+    max-width: 380px;
+    text-align: left; /* Teks alamat rata kiri */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    border: 1px solid rgba(242, 61, 61, 0.1);
+    transition: 0.3s ease;
+}
+
+.branch-card:hover {
+    transform: translateY(-5px);
+    background-color: var(--white);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+/* Icon Pin di atas kartu */
+.pin-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.pin-icon.red { background-color: #FFEBEE; }
+.pin-icon.yellow { background-color: #FFFDE7; }
+
+.pin-icon img { width: 20px; }
+
+.branch-name {
+    font-size: 22px;
+    color: var(--primary-red);
+    margin-bottom: 12px;
+}
+
+.branch-name.yellow-text {
+    color: #F9A825; /* Warna kuning yang lebih kebaca buat teks */
+}
+
+.branch-address {
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--charcoal);
+    margin-bottom: 20px;
+}
+
+.link-maps {
+    color: var(--primary-red);
+    font-weight: 600;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.link-maps:hover {
+    text-decoration: underline;
+}
+
+.sub-title {
+    margin-bottom: 10px;
+    color: var(--charcoal);
+    font-weight: 500;
+}
+
+.social-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 kolom sama rata */
+    gap: 24px;
+    margin-top: 40px;
+}
+
+/* Base Style Kartu Sosmed */
+.social-card {
+    padding: 30px 20px;
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.social-card img {
+    width: 45px;
+    height: 45px;
+    margin-bottom: 15px;
+}
+
+.platform {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+.handle {
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 4px;
+}
+
+/* Hover Effect (HCI Rule: Feedback Visual) */
+.social-card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+/* Warna Spesifik Tiap Platform */
+.ig {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+.tiktok {
+    background-color: #252525;
+}
+
+.wa {
+    background-color: #25D366;
+}
+
+.linktree {
+    background-color: #E23939; /* Merah Brand Cireng A'Paweh */
+}
+
+.text-center {
+    text-align: center;
+}
+
+.map-container {
+    width: 100%;
+    margin-top: 50px;
+    border-radius: 24px; /* Biar sudutnya membulat kayak kartu */
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    line-height: 0; /* Menghilangkan gap di bawah iframe */
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 450px; /* Sesuaikan tinggi petanya */
+}
+
+/* CTA Banner Section */
+.cta-banner {
+    background-color: var(--accent-yellow); /* Kuning khas A'Paweh */
+    padding: 80px 0;
+    text-align: center;
+}
+
+.cta-title {
+    font-size: 48px;
+    color: var(--charcoal);
+    margin-bottom: 16px;
+}
+
+.cta-subtitle {
+    font-size: 18px;
+    color: var(--charcoal);
+    margin-bottom: 40px;
+    font-weight: 500;
+}
+
+.cta-button-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Jarak antar tombol */
+    align-items: center;
+}
+
+/* Footer Section */
+.main-footer {
+    background-color: var(--charcoal);
+    color: var(--white);
+    padding: 80px 0 0 0; /* Padding bawah 0 karena ada footer-bottom */
+}
+
+.footer-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+    padding-bottom: 60px;
+}
+
+.footer-col {
+    flex: 1;
+}
+
+/* Brand Column */
+.footer-logo {
+    height: 50px;
+    margin-bottom: 15px;
+}
+
+.footer-brand-name {
+    color: var(--accent-yellow);
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.footer-tagline {
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 15px;
+    color: var(--accent-yellow);
+}
+
+.footer-desc {
+    font-size: 14px;
+    line-height: 1.6;
+    opacity: 0.7;
+}
+
+/* Titles & Links */
+.footer-title {
+    color: var(--accent-yellow);
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.footer-links li, .footer-contact li {
+    margin-bottom: 15px;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.footer-links a {
+    opacity: 0.7;
+    transition: 0.3s ease;
+}
+
+.footer-links a:hover {
+    opacity: 1;
+    color: var(--accent-yellow);
+    padding-left: 8px; /* Efek geser dikit pas di-hover */
+}
+
+/* Icons in Footer */
+.footer-icon {
+    width: 18px;
+    filter: brightness(0) invert(1); /* Mengubah ikon hitam jadi putih */
+}
+
+/* Footer Bottom Bar */
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 30px 0;
+}
+
+.bottom-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bottom-wrapper p {
+    font-size: 13px;
+    opacity: 0.5;
+}
+
+/* Social Media Icons in Bottom */
+.footer-socials {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-socials img {
+    width: 20px;
+    height: 20px;
+    opacity: 0.6;
+    transition: 0.3s;
+    filter: brightness(0) invert(1);
+}
+
+.footer-socials img:hover {
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+/* Perbaikan Posisi Logo & Nama Brand */
+.footer-logo-header {
+    display: flex;         /* Ini kuncinya buat sejajarin ke samping */
+    align-items: center;   /* Biar teksnya pas di tengah-tengah tinggi logo */
+    gap: 15px;             /* Jarak antara gambar logo dan tulisan */
+    margin-bottom: 20px;
+}
+
+.footer-logo {
+    height: 60px;          /* Sesuaikan ukuran logo-nya */
+    width: auto;
+    margin-bottom: 0;      /* Hapus margin bawah yang tadi */
+}
+
+.footer-brand-name {
+    color: var(--accent-yellow);
+    font-size: 22px;
+    margin-bottom: 0;      /* Biar nempel sama tagline bawahnya */
+}
+
+.footer-tagline {
+    font-weight: 600;
+    font-size: 12px;
+    color: var(--accent-yellow);
+    margin-bottom: 0;
+}
+
+.footer-brand-info {
+    display: flex;
+    flex-direction: column; /* Biar Nama & Tagline tetap tumpuk atas-bawah */
+}
