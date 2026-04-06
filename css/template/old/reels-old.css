@@ -1,0 +1,100 @@
+.sectionWrapper {
+  display: flex;
+  position: relative;
+  padding: var(--gap-large) 0;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--gap-large);
+  flex-shrink: 0;
+}
+
+.sectionHeader {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-small);
+  justify-content: center;
+  align-self: center;
+  align-items: center;
+}
+
+.sectionHeader h1,
+.sectionHeader .bodyMain {
+  margin: 0;
+}
+
+.videoCards {
+  display: flex;
+  flex-direction: row;
+  gap: var(--gap-large);
+  justify-content: center;
+}
+
+.mockup {
+  position: relative;
+  width: 300px;
+}
+
+.unfocused {
+  opacity: 50%;
+  transform: scale(0.8);
+  transform-origin: center;
+}
+
+.screen {
+  position: absolute;
+  top: 14px;
+  left: 16px;
+  width: 268px;
+  height: 580px;
+  object-fit: cover;
+  border-radius: 30px;
+  z-index: 1;
+}
+
+.frame {
+  position: relative;
+  width: 100%;
+  display: block;
+  z-index: 2;
+  pointer-events: none;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .sectionWrapper {
+    padding: 64px 0;
+    gap: 32px;
+  }
+
+  .videoCards {
+    gap: var(--gap-small);
+  }
+
+  .mockup {
+    width: 220px;
+  }
+
+  .screen {
+    top: 10px;
+    left: 12px;
+    width: 196px;
+    height: 424px;
+    border-radius: 22px;
+  }
+}
+
+@media (max-width: 767px) {
+  .sectionWrapper {
+    padding: var(--gap-medium) var(--gap-small);
+    gap: var(--gap-medium);
+    box-sizing: border-box;
+  }
+
+  .videoCards .mockup {
+    display: none;
+  }
+
+  .videoCards .mockup:nth-child(2) {
+    display: block;
+    width: min(100%, 300px);
+  }
+}

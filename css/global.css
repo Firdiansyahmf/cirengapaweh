@@ -6,7 +6,7 @@
 }
 
 :root {
-    /* Colors */
+    /* Colors Foundation Var */
     --primary-brand-red: #f23d3d;
     --accent-cheese-yellow: #ffca28;
     --charcoal-grey: #545454;
@@ -56,11 +56,12 @@
     --fdn-white-dark-active: #737373;
     --fdn-white-darker: #595959;
 
-    /* Font */
+    /* Font Family Var */
     --font-display: "Lilita One", sans-serif;
     --font-subheading: "Fredoka", sans-serif;
     --font-body: "Poppins", sans-serif;
 
+    /* Font Size Var */
     --fs-hero: 64px;
     --fs-h1: 48px;
     --fs-h2: 32px;
@@ -71,25 +72,36 @@
     --fs-caption: 14px;
     --fs-button: 18px;
 
-    /* Font Weight */
+    /* Font Weight Var */
     --fw-regular: 400;
     --fw-medium: 500;
     --fw-semibold: 600;
 
+    /* Effect Var*/
     --shadow-main: 0px 8px 26px rgba(84, 84, 84, 0.25);
     --shadow-lighter: 0px 0px 12px rgba(84, 84, 84, 0.25);
 
-    /* GAP Desktop */
+    /* GAP/PADDING/ICON Responsive Var */
     --gap-micro: 8px;
     --gap-small: 16px;
     --gap-medium: 32px;
-    --gap-large: 80px;
+    --gap-large: 64px;
 
-    /* Breakpoint */
+    /* Breakpoint Var */
     --breakpoint: 1200px;
 }
 
-/* Button Primary */
+body {
+    font-family: var(--font-body);
+}
+
+/* Breakpoint Class */
+.breakpoint {
+    max-width: var(--breakpoint);
+    width: 100%;
+}
+
+/* Button Primary Class */
 .btnPrimary {
     display: inline-flex;
     padding: var(--gap-small) var(--gap-medium);
@@ -101,7 +113,8 @@
     color: var(--clean-white);
     font-family: var(--font-body);
     font-size: var(--fs-button);
-    font-weight: var(--fw-medium);
+    font-weight: var(--fw-semibold);
+    transition: 0.115s;
 }
 
 .btnPrimary .btnIcon {
@@ -112,19 +125,18 @@
 
 .btnPrimary:hover {
     background: var(primary --fdn-red-normal-hover);
-    color: var(--clean-white);
-    transition: 0.29;
+    color: var(--fdn-white-light-hover);
 }
 
 .btnPrimary:active {
     background: var(primary --fdn-red-dark-active);
-    color: var(--clean-white);
-    transition: 0.29;
+    color: var(--fdn-grey-light-active);
 }
 
+/* Button Soft Class */
 .btnSoft {
     display: inline-flex;
-    padding: var(--gap-small) var(--fw-medium);
+    padding: var(--gap-small) var(--gap-medium);
     justify-content: center;
     align-items: center;
     gap: var(--gap-micro);
@@ -133,24 +145,24 @@
     color: var(--charcoal-grey);
     font-family: var(--font-body);
     font-size: var(--fs-button);
-    font-weight: var(--fw-medium);
+    font-weight: var(--fw-semibold);
+    transition: 0.115s;
 }
 
 .btnSoft:hover {
     background: var(--fdn-grey-light-hover);
     color: var(--fdn-grey-normal-hover);
-    transition: 0.29;
 }
 
 .btnSoft:active {
     background: var(--fdn-grey-light-active);
     color: var(--fdn-grey-normal-active);
-    transition: 0.29;
 }
 
+/* Button Outline Class */
 .btnOutline {
     display: inline-flex;
-    padding: var(--gap-small) var(--fw-medium);
+    padding: var(--gap-small) var(--gap-medium);
     justify-content: center;
     align-items: center;
     gap: var(--gap-micro);
@@ -160,22 +172,110 @@
     color: var(--primary-brand-red);
     font-family: var(--font-body);
     font-size: var(--fs-button);
-    font-weight: var(--fw-medium);
+    font-weight: var(--fw-semibold);
+    transition: 0.115s;
 }
 
 .btnOutline:hover {
     background: var(--fdn-white-normal-hover);
     color: var(--fdn-red-normal-hover);
-    transition: 0.29;
 }
 
 .btnOutline:active {
     background: var(--fdn-white-normal-active);
     color: var(--fdn-red-normal-active);
-    transition: 0.29;
 }
 
-/* Typography */
+/* More Button Class */
+.btnPlay {
+    border-radius: 100%;
+    max-width: 64px;
+    min-width: 64px;
+    box-shadow: 0 15px 30px 0 rgba(223, 105, 81, 0.30);
+    transition: 0.115s;
+}
+
+.btnPlay:hover {
+    scale: 1.044;
+}
+
+.btnSearch {
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+    /* button size + micro gap*/
+    cursor: pointer;
+    max-width: 40px;
+    min-width: 40px;
+    max-height: 40px;
+    min-height: 40px;
+    width: 100%;
+    border-radius: 100%;
+    background-color: var(--primary-brand-red);
+    aspect-ratio: 1/1;
+}
+
+.btnSearch img {
+    max-width: 20px;
+}
+
+.btnSearch:hover {
+    background-color: var(--fdn-red-normal-hover);
+}
+
+.btnSearch:active {
+    background-color: var(--fdn-red-normal-active);
+}
+
+/* Flex Classes */
+.flexCol {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-medium);
+    height: fit-content;
+}
+
+.flexRow {
+    display: flex;
+    height: fit-content;
+}
+
+/* Input Classes */
+input {
+    height: 40px;
+    color: var(--charcoal-grey);
+    font-size: var(--fs-body-main);
+    font-weight: var(--fw-semibold);
+    padding: var(--gap-micro) var(--gap-micro) var(--gap-micro) 24px;
+    transition: 0.115s;
+}
+
+input::placeholder {
+    color: rgba(84, 84, 84, 0.4);
+    font-size: var(--fs-body-main);
+    font-weight: var(--fw-semibold);
+}
+
+input:focus {
+    outline: 2px solid var(--charcoal-grey);
+}
+
+/* Search Bar Class */
+.flexRow .searchBar {
+    justify-content: center;
+}
+
+.searchBar {
+    display: flex;
+    max-width: 480px;
+    width: 100%;
+    border-radius: 100px;
+    border: 1px solid var(--charcoal-grey);
+    background: var(--clean-white);
+}
+
+/* Typography Classes */
 .displayHero {
     font-family: var(--font-display);
     font-size: var(--fs-hero);
@@ -227,10 +327,10 @@
 .btnText {
     font-family: var(--font-body);
     font-size: var(--fs-button);
-    font-weight: var(--fw-medium);
+    font-weight: var(--fw-semibold);
 }
 
-/* Effects */
+/* Effects Classes */
 .shadow {
     box-shadow: var(--shadow-main);
 }
@@ -239,19 +339,186 @@
     box-shadow: var(--shadow-lighter);
 }
 
-/* Breakpoint */
-.breakpoint {
-    max-width: var(--breakpoint);
-    width: 100%;
+/* Color Classes */
+.primaryBrandRed {
+    color: var(--primary-brand-red);
 }
 
-/* Text */
-.red {
-    color: var(--primary-brand-red)
+.accentCheeseYellow {
+    color: var(--accent-cheese-yellow);
 }
 
-.yellow {
-    color: var(--accent-cheese-yellow)
+.charcoalGrey {
+    color: var(--charcoal-grey);
+}
+
+.cleanWhite {
+    color: var(--clean-white);
+}
+
+.fdnRedLight {
+    color: var(--fdn-red-light);
+}
+
+.fdnRedLightHover {
+    color: var(--fdn-red-light-hover);
+}
+
+.fdnRedLightActive {
+    color: var(--fdn-red-light-active);
+}
+
+.fdnRedNormal {
+    color: var(--fdn-red-normal);
+}
+
+.fdnRedNormalHover {
+    color: var(--fdn-red-normal-hover);
+}
+
+.fdnRedNormalActive {
+    color: var(--fdn-red-normal-active);
+}
+
+.fdnRedDark {
+    color: var(--fdn-red-dark);
+}
+
+.fdnRedDarkHover {
+    color: var(--fdn-red-dark-hover);
+}
+
+.fdnRedDarkActive {
+    color: var(--fdn-red-dark-active);
+}
+
+.fdnRedDarker {
+    color: var(--fdn-red-darker);
+}
+
+.fdnYellowLight {
+    color: var(--fdn-yellow-light);
+}
+
+.fdnYellowLightHover {
+    color: var(--fdn-yellow-light-hover);
+}
+
+.fdnYellowLightActive {
+    color: var(--fdn-yellow-light-active);
+}
+
+.fdnYellowNormal {
+    color: var(--fdn-yellow-normal);
+}
+
+.fdnYellowNormalHover {
+    color: var(--fdn-yellow-normal-hover);
+}
+
+.fdnYellowNormalActive {
+    color: var(--fdn-yellow-normal-active);
+}
+
+.fdnYellowDark {
+    color: var(--fdn-yellow-dark);
+}
+
+.fdnYellowDarkHover {
+    color: var(--fdn-yellow-dark-hover);
+}
+
+.fdnYellowDarkActive {
+    color: var(--fdn-yellow-dark-active);
+}
+
+.fdnYellowDarker {
+    color: var(--fdn-yellow-darker);
+}
+
+.fdnGreyLight {
+    color: var(--fdn-grey-light);
+}
+
+.fdnGreyLightHover {
+    color: var(--fdn-grey-light-hover);
+}
+
+.fdnGreyLightActive {
+    color: var(--fdn-grey-light-active);
+}
+
+.fdnGreyNormal {
+    color: var(--fdn-grey-normal);
+}
+
+.fdnGreyNormalHover {
+    color: var(--fdn-grey-normal-hover);
+}
+
+.fdnGreyNormalActive {
+    color: var(--fdn-grey-normal-active);
+}
+
+.fdnGreyDark {
+    color: var(--fdn-grey-dark);
+}
+
+.fdnGreyDarkHover {
+    color: var(--fdn-grey-dark-hover);
+}
+
+.fdnGreyDarkActive {
+    color: var(--fdn-grey-dark-active);
+}
+
+.fdnGreyDarker {
+    color: var(--fdn-grey-darker);
+}
+
+.fdnWhiteLight {
+    color: var(--fdn-white-light);
+}
+
+.fdnWhiteLightHover {
+    color: var(--fdn-white-light-hover);
+}
+
+.fdnWhiteLightActive {
+    color: var(--fdn-white-light-active);
+}
+
+.fdnWhiteNormal {
+    color: var(--fdn-white-normal);
+}
+
+.fdnWhiteNormalHover {
+    color: var(--fdn-white-normal-hover);
+}
+
+.fdnWhiteNormalActive {
+    color: var(--fdn-white-normal-active);
+}
+
+.fdnWhiteDark {
+    color: var(--fdn-white-dark);
+}
+
+.fdnWhiteDarkHover {
+    color: var(--fdn-white-dark-hover);
+}
+
+.fdnWhiteDarkActive {
+    color: var(--fdn-white-dark-active);
+}
+
+.fdnWhiteDarker {
+    color: var(--fdn-white-darker);
+}
+
+/* Visibillity Classes */
+.forMobile {
+    display: none;
 }
 
 @media (max-width: 1024px) {
@@ -260,14 +527,19 @@
         --fs-h1: 40px;
         --fs-button: 16px;
 
-        /* GAP Tablet */
+        /* GAP/Padding Tablet */
         --gap-micro: 8px;
         --gap-small: 16px;
         --gap-medium: 24px;
         --gap-large: 48px;
 
-        /* Breakpoint */
+        /* Breakpoint Tablet */
         --breakpoint: 768px;
+    }
+
+    /* Search Bar Tablet */
+    .searchBar {
+        min-width: 95%;
     }
 }
 
@@ -279,13 +551,54 @@
         --fs-h3: 20px;
         --fs-h4: 18px;
 
-        /* GAP Mobile */
+        /* GAP/Padding Mobile */
         --gap-micro: 8px;
         --gap-small: 16px;
         --gap-medium: 24px;
         --gap-large: 40px;
 
-        /* Breakpoint */
-        --breakpoint: 390px;
+        /* Breakpoint Mobile */
+        --breakpoint: 768px;
+    }
+
+    /* Search Bar Tablet */
+    .searchBar {
+        min-width: 90%;
+    }
+
+    /* More Button Class */
+    .btnPlay {
+        max-width: 54px;
+        min-width: 54px;
+    }
+
+    /* Visibillity Classes Mobile */
+    .forMobile {
+        display: block;
+    }
+}
+
+@media (max-width: 367px) {
+    :root {
+        --fs-hero: 32px;
+        --fs-h1: 24px;
+        --fs-h2: 16px;
+        --fs-h3: 12px;
+        --fs-h4: 10px;
+
+        /* GAP/Padding Mobile */
+        --gap-micro: 5px;
+        --gap-small: 11px;
+        --gap-medium: 19px;
+        --gap-large: 35px;
+
+        /* Breakpoint Mobile */
+        --breakpoint: 360px;
+    }
+
+    /* More Button Class */
+    .btnPlay {
+        max-width: 46px;
+        min-width: 46px;
     }
 }

@@ -1,42 +1,114 @@
 .templateHero {
   width: 100%;
   height: 100vh;
-  background: linear-gradient(220deg,
-      var(--fdn-yellow-light) 0.69%,
-      var(--clean-white, #fff) 57.53%);
   display: flex;
   justify-content: center;
   color: var(--charcoal-grey);
-  padding: var(--fs-micro) var(--fs-h2) var(--fs-h1) var(--fs-h2);
 }
 
-.templateHero .breakpoint {
+.breakpoint {
   display: flex;
   align-items: center;
-  gap: auto;
+  gap: var(--gap-medium);
 }
 
-.templateHero .wrap {
+.box1 {
+  position: relative;
+}
+
+#maskot {
+  max-width: 410px;
+}
+
+/* "Kamu" */
+.inlineFlex {
   display: inline-flex;
   flex-direction: column;
 }
 
-.templateHero .wrap img {
+.inlineFlex img {
   position: relative;
   left: -10px;
-  max-width: 180px;
+  max-width: 223px;
 }
 
-.templateHero #maskot {
-  max-width: 385px;
+.flexCol .flexRow:nth-of-type(4) {
+  gap: var(--gap-small);
+  align-items: center;
+}
+
+.flexCol .flexRow:nth-of-type(4) .flexRow {
+  align-items: center;
+  gap: var(--gap-small);
+}
+
+.templateHero .btnSearch {
+  top: 8px;
+  right: 48px;
+}
+
+@media (max-width: 1024px) {
+  .templateHero {
+    padding-top: 102px;
+    align-content: baseline;
+  }
+
+  .breakpoint {
+    flex-direction: column;
+  }
+
+  .breakpoint .flexCol {
+    align-content: center !important;
+  }
+
+  .inlineFlex img {
+    left: -5px;
+    max-width: 167px;
+  }
 }
 
 @media (max-width: 768px) {
-  .templateHero {
-    padding-top: 100px;
+  .breakpoint .flexCol {
+    align-content: left;
   }
 
-  .templateHero .breakpoint {
-    flex-direction: column;
+  .flexCol .flexRow:nth-of-type(4) {
+    /* width: fit-content; */
+    flex-wrap: nowrap;
+  }
+
+  .flexCol .flexRow:nth-of-type(4) .btnText {
+    font-size: var(--fs-caption);
+  }
+
+
+  .box1 {
+    align-self: baseline;
+    right: var(--gap-medium);
+  }
+
+  #maskot {
+    width: 100%;
+  }
+
+  .box2 {
+    max-width: 100%;
+  }
+
+  .inlineFlex img {
+    left: -5px;
+    max-width: 138.6px;
+  }
+}
+
+@media (max-width: 367px) {
+  .inlineFlex img {
+    left: -4px;
+    max-width: 114.6px;
+  }
+
+  .templateHero .btnSearch {
+    top: 6px;
+    right: 48px;
   }
 }
